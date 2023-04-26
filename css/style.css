@@ -1,0 +1,381 @@
+/* Define as regras para todos os elementos do documento */
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* Define a imagem de fundo para o corpo da página */
+body {
+	background-image: url('../img/bg.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	/*background: url(../img/bg.png) center center no-repeat #0a0f1b;*/
+	background-size: cover;
+	/*display: flex; /*não precisa*/
+	/*flex-direction: column; /*não precisa*/
+  }
+
+/* Define as regras para o elemento que irá conter o seletor */
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh; /* Define a altura mínima como 100% da altura da viewport ;  calc(100vh - 60px);altura da div footer (60px) */
+	height: auto; /* Define a altura automática de acordo com o conteúdo - altura da div footer (60px)? */
+}
+
+/* Define as regras para o seletor */
+.select {
+	margin: auto;
+	display: block;
+	user-select: none!important; /* Impede a seleção do texto no seletor */
+	position: relative;
+}
+
+/* Define as regras para a imagem do seletor */
+.select img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Define as regras para as áreas clicáveis do seletor */
+.select area {
+	position: absolute;
+}
+
+.select area:first-of-type {
+	top: 80%; /* Define a posição vertical da área */
+	left: 15.5%; /* Define a posição horizontal da área */
+	width: 15.5%; /* Define a largura da área */
+	height: 20%; /* Define a altura da área */
+}
+
+.select area:last-of-type {
+	top: 80%; /* Define a posição vertical da área */
+	right: 16.5%; /* Define a posição horizontal da área */
+	width: 15.5%; /* Define a largura da área */
+	height: 20%; /* Define a altura da área */
+}
+
+/* Define as regras para o rodapé */
+.footer {
+	display: flex;
+	flex-direction: column;
+	background: #ffffff60; /* Define a cor de fundo do rodapé */
+	height: 12vh; /* Define a altura do rodapé em 10% da altura total da viewport */
+	position: fixed; /* Define a posição fixa na parte inferior da tela */
+	bottom: 0;
+	width: 100%; /* Define a largura como 100% da largura da viewport */
+}
+
+/* Define as regras para a seção de direitos autorais do rodapé */
+.rights {
+	background: #1e1e1ea6; /* Define a cor de fundo da seção */
+	color: #d9fbffd0; /* Define a cor do texto da seção */
+	font-family: 'Arial Regular'; /* Define a fonte do texto da seção */
+	font-size: 13px; /* Define o tamanho da fonte do texto da seção */
+	padding: 7px 0; /* Define o preenchimento superior e inferior da seção */
+	text-align: center; /* Define o alinhamento do texto */
+}
+
+/* Define as regras para a seção de informações da seção do rodapé */
+.footer .pc {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding: 1%;
+}
+
+.footer .pc img {
+	margin-right: 10px; /* Define a margem à direita da imagem */
+	margin-bottom: 3px;
+	margin-left: 0;
+}
+
+.footer .pc span {
+	font-family: 'Arial Regular'; /* Define a fonte do texto da seção */
+	font-size: 12px; /* Define o tamanho da fonte do texto da seção */
+	font-weight: bold; /* Define o peso da fonte */
+	color: #1e1e1e;
+	text-align: center;
+	margin-left: auto;
+	margin-right: 0;
+}
+
+/* Define o menu responsivo */
+/* estilo para telas maiores */
+#cssmenu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 54px;
+	background: linear-gradient(to bottom, #32323a, #141414);
+	border-bottom: 3.5px solid #73ffe8; /*borda azul*/
+}
+
+ #cssmenu ul {
+	list-style: none;  /*tirando indicação - bolinha - de cada botão*/
+	display: flex;
+  }
+
+#cssmenu > ul > li {
+	position: relative;
+}
+
+#cssmenu a {
+	display: inline-block;
+	padding: 0 40px;
+	line-height: 50px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+	text-align: center;
+}
+/*arredondamento dos cantos superiores*/
+#cssmenu > ul > li > a {
+	border-radius: 5px 5px 0 0;
+}
+/* apenas arredondando um lado do primeiro e ultimo
+#cssmenu > ul > li:first-child > a {
+	border-radius: 5px 5px 0 0;
+}
+
+#cssmenu > ul > li:last-child > a {
+	border-radius: 0 5px 0 0;
+}*/
+
+#cssmenu > ul > li:hover:after { /*seta*/
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	border-left: 10px solid transparent; 
+	border-right: 10px solid transparent;
+	border-bottom: 5px solid #73ffe8;
+	margin-left: -10px;
+}
+
+#cssmenu > ul > li.active > a {
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.45);
+	background: linear-gradient(to bottom, #26262c 0%, rgba(0, 0, 0, 0.45) 100%);
+}
+
+#cssmenu > ul > li:hover > a {
+	background: linear-gradient(to bottom, #26262c 0%, #070707 100%);
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.45);
+}
+
+#cssmenu .has-sub {
+	z-index: 1;
+}
+
+#cssmenu .has-sub:hover > ul {
+	display: block;
+}
+
+#cssmenu .has-sub ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 2%;
+	padding: 0;
+	margin: 0;
+}
+
+#cssmenu .has-sub ul li a {
+	display: block;
+	padding: 15px; /*tamanho submenu*/
+	font-size: 11.5px;
+	line-height: 100%;
+	color: #fcfcfc;
+	background: #73ffe89f;
+}
+
+#cssmenu .has-sub ul li a:hover {
+	background: #73ffe8;
+}
+
+/* estilo para telas menores*/
+
+@media (max-width: 768px) {
+	#cssmenu {
+	  position: relative;
+	}
+  
+	#cssmenu > ul {
+	  max-height: 0;
+	  overflow: hidden;
+	  transition: max-height 0.35s ease-out;
+	}
+  
+	#cssmenu ul ul {
+	  max-height: none;
+	}
+  
+	#cssmenu .has-sub > a:after {
+	  content: "";
+	  position: absolute;
+	  top: 22px;
+	  right: 10px;
+	  border: 6px solid transparent;
+	  border-top-color: #fff;
+	}
+  
+	#cssmenu .has-sub.active > a:after {
+	  top: 23px;
+	  border: 5px solid transparent;
+	  border-left-color: #fff;
+	}
+  
+	#cssmenu ul li {
+	  display: block;
+	  width: 100%;
+	}
+  
+	#cssmenu > ul > li > a {
+	  display: block;
+	  width: 100%;
+	  border-bottom: 1px solid #ebebeb;
+	  padding: 12px 20px;
+	  line-height: 1.7em;
+	}
+  
+	#cssmenu ul ul li a {
+	  padding: 12px 50px;
+	  line-height: 1.7em;
+	}
+  
+	#cssmenu .has-sub > a {
+	  position: relative;
+	}
+  
+	#cssmenu .has-sub.active > ul {
+	  max-height: 1000px;
+	}
+  
+	#cssmenu ul ul {
+	  transition: max-height 0.35s ease-out;
+	}
+  
+	#cssmenu .submenu-button {
+	  display: block;
+	  position: absolute;
+	  right: 0;
+	  top: 0;
+	  z-index: 1;
+	  background: #32323aa2;
+	  width: 20px;
+	  height: 20px;
+	  cursor: pointer;
+	}
+  
+	#cssmenu .submenu-button:after {
+	  content: "";
+	  display: block;
+	  position: absolute;
+	  right: 10px;
+	  top: 18px;
+	  border: 6px solid transparent;
+	  border-top-color: #fff;
+	}
+  
+	#cssmenu .submenu-button.active:after {
+	  top: 23px;
+	  border: 5px solid transparent;
+	  border-left-color: #fff;
+	}
+  
+	#cssmenu ul ul .submenu-button {
+	  position: absolute;
+	  right: auto;
+	  top: 0;
+	}
+  }
+  
+  /* Estilos para telas menores -> Hamburguer */
+@media screen and (max-width: 768px) {
+	/* Esconde o menu */
+	#cssmenu ul {
+	  display: none;
+	}
+	#cssmenu > ul.open {
+		max-height: 1000px;
+	  }
+	
+	/* Estilos para o ícone do hambúrguer */
+	#cssmenu .menu-icon {
+	  cursor: pointer;
+	  display: inline-block;
+	  position: center; /*absolute p voltar ao canto*/
+	  top: 12px;
+	  right: 16px;
+	  width: 30px;
+	  height: 20px;
+	}
+	
+	#cssmenu .menu-icon .bar {
+	  display: block;
+	  width: 100%;
+	  height: 3px;
+	  background-color: #73ffe8;
+	  border-radius: 3px;
+	  transition: all 0.2s ease-in-out;
+	}
+	
+	#cssmenu .menu-icon .bar+.bar {
+	  margin-top: 5px;
+	}
+	
+	/* Estilos para o menu aberto */
+	#cssmenu ul.open {
+	  display: block;
+	  position: absolute;
+	  top: 50px;
+	  right: 0;
+	  left: 0;
+	  background-color: #141414cb;
+	  border-top: 4.5px solid #73ffe8;
+	  padding: 120px;
+	  padding-top: 0;
+	  min-height: 468px; /*"aumentando o tamanho" para mais opções adicionadas - testes*/
+	  /*max-height: auto; /*768px*/
+	  z-index: 999;
+	}
+	
+	#cssmenu ul.open li {
+	  display: block;
+	  margin: 0;
+	}
+	
+	#cssmenu ul.open li a {
+	  display: inline-flexbox;
+	  padding: 15px;
+	  line-height: 15px;
+	  font-size: 13px;
+	  color: #fff;
+	  margin-top: 0;
+	}
+}
+
+/*
+Comentário sobre a nossa atualização do menu;
+
+Agora está estruturado em duas partes: 
+uma para telas maiores e outra para telas menores, definidas por meio da regra @media (max-width: 768px).
+Na parte para telas maiores, o menu é estilizado com uma altura de 54px, um fundo gradiente que vai do preto ao cinza escuro, 
+uma borda inferior sólida de 4px de largura na cor turquesa. 
+O conteúdo do menu é organizado em uma lista sem marcadores (list-style: none;), exibida como um elemento de bloco com conteúdo 
+flexível (display: flex;), com cada item da lista (<li>) posicionado de forma relativa (position: relative;). 
+Os links (<a>) têm cor branca (color: #fff;), tamanho de fonte de 14 pixels (font-size: 14px;), são centralizados 
+verticalmente (align-items: center;) e horizontalemente (justify-content: center;) e possuem preenchimento (padding) de 0 à 40 pixels.
+Os primeiros e últimos itens da lista possuem um estilo diferenciado, com cantos arredondados (aqui, de 5 pixels), enquanto os itens 
+que estão com o cursor em cima (:hover) possuem sombras internas (box-shadow) e um fundo gradiente. Os itens que possuem submenus (<ul>) 
+possuem uma seta posicionada na parte inferior, também ativada por :hover.
+
+Na parte para telas menores, o estilo é adaptado para telas de até 768 pixels de largura, com os links ocupando a largura total da tela 
+e com um botão hamburguer para ativar o menu. Além disso, a altura da lista é controlada por meio de transições (transition) e o botão 
+hamburguer é estilizado com uma seta que muda de direção quando o submenu está aberto. O código também define que o menu será escondido 
+com display: none; para telas menores, e que o submenu será exibido quando o botão hamburguer for clicado.*/

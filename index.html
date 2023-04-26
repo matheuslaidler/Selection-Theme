@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome - Matheus Laidler</title>
+	<!-- Normalizando codificação de caracteres do arquivo HTML com navegador -->
+	<meta charset="UTF-8">
+	 <link rel="icon" class="favicon" href="img/favicon.ico" /> 
+	<!-- <link rel="icon" href="https://app.gitbook.com/public/emojis/1f575-2642.png?v=6.0.0" id="__link-icon"/>-->
+	<!-- Definindo as meta tags para o SEO -->
+	<meta name="keywords" content="Tecnologia,Programação,Programming,Hacking,CyberSecurity,Estudos,Redes,Segurança">
+	<meta name="Description" content="Página de boas vindas e seleção dos projetos de matheus laidler. Escolha entre as áreas reservadas aos projetos de desenvolvimentos e aos conteúdos de divulgação científica sobre tecnologia e hacking.">
+	<!-- Definindo a viewport para responsividade -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Incluindo o arquivo CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- menu mobile -->
+	<nav id="cssmenu">
+		<!-- Topo da página com a Logo // teste // retirar -->
+		<table width="auto" border="0" align="center"> 
+			<tbody>
+			 <tr>  
+			  <td>
+				<a href="index.html" title="matheuslaidler" target="_parent">
+				  <img src="https://raw.githubusercontent.com/matheuslaidler/Menu-de-Navegacao/main/logo.png?token=GHSAT0AAAAAACBL3W7GTWLRBQRPEDFXR2V2ZCI27BQ" width="auto" height="35" border="0"/>
+				  <img src="https://raw.githubusercontent.com/matheuslaidler/Menu-de-Navegacao/main/underline.gif?token=GHSAT0AAAAAACBL3W7HF2J37R2MEYBM2JTEZCI26TA" width="5" height="20" border="0"/></a>
+				</td> 
+			  </tbody>
+			</table> 
+		<div class="menu-icon">
+		  <span class="bar"></span>
+		  <span class="bar"></span>
+		  <span class="bar"></span>
+		</div>
+		<ul>
+		  <li><a href="https://matheuslaidler.github.io/index.html" target="_blank">ᴘᴀɢɪɴᴀ</a></li>
+		  <li><a href="#">ᴛᴇsᴛᴇ</a></li>
+		  <li><a href="https://github.com/matheuslaidler" target="_blank">ɢɪᴛʜᴜʙ</a></li>
+		  <li class="has-sub"><a href="#">ᴀᴄᴇʀᴠᴏs </a>
+			<ul>
+			  <li><a href="https://matheuslaidler.gitbook.io/road2tech" target="_blank">ʀᴏᴀᴅ2ᴛᴇᴄʜ</a></li>
+			  <li><a href="https://matheuslaidler.gitbook.io/wayofsec" target="_blank">ᴡᴀʏᴏꜰsᴇᴄ</a></li>
+			  <li><a href="https://matheuslaidler.gitbook.io/seclab" target="_blank">sᴇᴄʟᴀʙ</a></li>
+			  <li><a href="https://matheuslaidler.github.io/draft-page" target="_blank">ʀᴀsᴄᴜɴʜᴏs</a></li> <!--usar a atual pagina de posts como pagina de rascunhos e salvando as postagens como bk-->
+			  <li class="has-sub" ><a href="#">ᴄᴏɴᴛʀɪʙᴜɪʀ</a>
+				<ul><center><!-- paypal -->
+				<div id="donate-button-container">
+					<div id="donate-button" ></div>
+					<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+					<script>
+					PayPal.Donation.Button({
+					env:'production',
+					hosted_button_id:'55KGKSTYDTDCS',
+					image: {
+					src:'https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif',
+					alt:'Faça doações com o botão do PayPal',
+					title:'PayPal - Doação segura !',
+					}
+					}).render('#donate-button');
+					</script>
+				</div>
+				</center></ul></li>
+			</ul></li>
+		<script>
+			// Get the hamburger icon and the menu list
+			const hamburger = document.querySelector('.menu-icon');
+			const menuList = document.querySelector('#cssmenu ul');
+
+			// Add event listener to the hamburger icon
+			hamburger.addEventListener('click', function() {
+			// Toggle the 'open' class to show/hide the menu
+			menuList.classList.toggle('open');
+			});
+		  </script>
+	  </nav>  
+</head>
+<body>
+	<!-- Criando o wrapper que centraliza o conteúdo -->
+	<div class="wrapper">
+		<!-- Criando a div que contém as imagens dos botões de seleção -->
+		<div class="select">
+			<!-- Incluindo as imagens dos botões de seleção e definindo uma imagem como mapa de navegação -->
+			<img src="img/buttons.png" alt="" usemap="#Map" id="select-pc" />
+			<map name="Map" id="Map">
+				<area alt="" title="" href="#" shape="poly" target="_blank"/>
+				<area alt="" title="" href="#" shape="poly" target="_blank"/>
+			</map>
+		</div>
+	</div>
+	<!-- Criando o footer -->
+	<div class="footer">
+		<!-- Criando a div para exibir o texto do rodapé -->
+		<div class="rights">
+			ᴘʀᴏᴊᴇᴛᴏ ᴘᴇssᴏᴀʟ - ᴇᴍ ᴅᴇsᴇɴᴠᴏʟᴠɪᴍᴇɴᴛᴏ
+		</div>
+		<!-- Criando a div para exibir a logo do rodapé -->
+		<div class="pc">
+			<!-- Incluindo a imagem da logo -->
+			<img src="img/logo_footer.png" alt="Logo" style="display: inline-block;">
+			<!-- Exibindo o texto de direitos autorais -->
+			<span>Copyright © Todos os direitos reservados.</span></div>
+	</div>
+	<!-- Desabilitando o recurso de arrastar e soltar a imagem dos botões de seleção -->
+	<script type="text/javascript">
+		document.getElementById('select-pc').ondragstart = function() { return false; };
+	</script>
+</body>
+</html>
