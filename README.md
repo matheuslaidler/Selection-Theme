@@ -12,5 +12,5 @@
   Abração!
   
   
-  - Ainda estou desenvolvendo a página oficial que ficará na aba principal do github-page, a ideia é essa página ser algo interessante e que possa te levar as minhas publicações do gitbook e as publicações do githubpage dos rascunhos. Também penso em deixar algumas coisas a mais dentro desta página, como projetos de portfólio e coisas do tipo. Ter uma área para todos os temas front-end que publiquei e aos futuros jogos que disponibilizarei aqui, por exemplo, seria algo bem interessante.
+  - Ainda estou desenvolvendo a página oficial que ficará na aba principal do github-page, a ideia é essa página ser algo interessante e que possa te levar as minhas publicações do gitbook (rascunhos) ou githubpage. Também penso em deixar algumas coisas a mais dentro desta página, como projetos de portfólio e coisas do tipo. Ter uma área para todos os temas front-end que publiquei e aos futuros jogos que disponibilizarei aqui, por exemplo, seria algo bem interessante.
  
